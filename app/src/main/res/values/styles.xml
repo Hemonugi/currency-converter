@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="NumberButtonsStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:background">@color/main_background</item>
+        <item name="android:textColor">@color/main_text</item>
+    </style>
+
+    <style name="InputStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:background">@color/main_background</item>
+        <item name="android:textColor">@color/main_text</item>
+    </style>
+</resources>
