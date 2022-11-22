@@ -64,6 +64,10 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/numSwitch"
+            android:text="switch"
+            style="@style/NumberButtonsStyle" />
+        <Button
             android:id="@+id/numClear"
             android:text="back"
             style="@style/NumberButtonsStyle" />
@@ -72,10 +76,6 @@
             android:text="clear"
             style="@style/NumberButtonsStyle" />
 
-        <Button
-            android:id="@+id/numSwitch"
-            android:text="Swich"
-            style="@style/NumberButtonsStyle" />
     </LinearLayout>
 
     <LinearLayout
