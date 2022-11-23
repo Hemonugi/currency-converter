@@ -39,6 +39,20 @@ class MainActivity : AppCompatActivity() {
                 calculateCourse(binding)
             }
         }
+
+        binding.numBack.setOnClickListener {
+            expressionString = ""
+            binding.expInput.text = expressionString
+            binding.resInput.text = ""
+        }
+
+        binding.numClear.setOnClickListener {
+            if (expressionString.isNotEmpty()) {
+                expressionString = expressionString.dropLast(1)
+                binding.expInput.text = expressionString
+                calculateCourse(binding)
+            }
+        }
     }
 
     private fun calculateCourse(binding: ActivityMainBinding) {
