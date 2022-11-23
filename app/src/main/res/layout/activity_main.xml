@@ -26,10 +26,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:text="0"
-            android:textColor="@color/main_text" />
+            android:textColor="@color/main_text"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -51,10 +53,13 @@
             android:id="@+id/resInput"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:text="0"
-            android:textColor="@color/main_text" />
+            android:textColor="@color/main_text"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,7 +70,7 @@
 
         <Button
             android:id="@+id/numSwitch"
-            android:text="switch"
+            android:text="swith"
             style="@style/NumberButtonsStyle" />
         <Button
             android:id="@+id/numClear"
@@ -156,6 +161,4 @@
             android:text=","
             style="@style/NumberButtonsStyle" />
     </LinearLayout>
-
-
 </LinearLayout>
