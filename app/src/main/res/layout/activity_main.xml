@@ -73,12 +73,12 @@
             android:text="swith"
             style="@style/NumberButtonsStyle" />
         <Button
-            android:id="@+id/numClear"
-            android:text="back"
-            style="@style/NumberButtonsStyle" />
-        <Button
             android:id="@+id/numBack"
             android:text="clear"
+            style="@style/NumberButtonsStyle" />
+        <Button
+            android:id="@+id/numClear"
+            android:text="back"
             style="@style/NumberButtonsStyle" />
 
     </LinearLayout>
