@@ -158,7 +158,7 @@
             style="@style/NumberButtonsStyle" />
         <Button
             android:id="@+id/numDot"
-            android:text=","
+            android:text="."
             style="@style/NumberButtonsStyle" />
     </LinearLayout>
 </LinearLayout>

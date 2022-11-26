@@ -21,7 +21,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setListeners(binding: ActivityMainBinding) {
-        val buttons = listOf(binding.numZero,
+        val buttons = listOf(
+            binding.numDot,
+            binding.numZero,
             binding.numOne,
             binding.numTwo,
             binding.numThree,
