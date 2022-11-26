@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         buttons.forEach { button -> button.setOnClickListener {
                 expressionString += button.text
                 binding.expInput.text = expressionString
-                calculateCourse(binding)
+                calculateRate(binding)
             }
         }
 
@@ -50,12 +50,12 @@ class MainActivity : AppCompatActivity() {
             if (expressionString.isNotEmpty()) {
                 expressionString = expressionString.dropLast(1)
                 binding.expInput.text = expressionString
-                calculateCourse(binding)
+                calculateRate(binding)
             }
         }
     }
 
-    private fun calculateCourse(binding: ActivityMainBinding) {
+    private fun calculateRate(binding: ActivityMainBinding) {
         if (expressionString.isNotEmpty()) {
             val df = DecimalFormat("#.##")
             binding.resInput.text = df.format(expressionString.toFloat() / currentCourse);
