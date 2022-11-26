@@ -36,7 +36,12 @@ class MainActivity : AppCompatActivity() {
         )
 
         buttons.forEach { button -> button.setOnClickListener {
-                expressionString += button.text
+            var textInButton = button.text
+            if (textInButton.substring(0, 1) == binding.numDot.text) {
+                textInButton = "0$textInButton";
+            }
+
+            expressionString += textInButton
                 binding.expInput.text = expressionString
                 calculateRate(binding)
             }
