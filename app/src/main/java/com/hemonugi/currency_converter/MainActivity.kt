@@ -35,13 +35,14 @@ class MainActivity : AppCompatActivity() {
             binding.numNine,
         )
 
-        buttons.forEach { button -> button.setOnClickListener {
-            var textInButton = button.text
-            if (textInButton.substring(0, 1) == binding.numDot.text) {
-                textInButton = "0$textInButton";
-            }
+        buttons.forEach { button ->
+            button.setOnClickListener {
+                var textInButton = button.text
+                if (textInButton.substring(0, 1) == binding.numDot.text) {
+                    textInButton = "0$textInButton"
+                }
 
-            expressionString += textInButton
+                expressionString += textInButton
                 binding.expInput.text = expressionString
                 calculateRate(binding)
             }
@@ -64,8 +65,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateRate(binding: ActivityMainBinding) {
         if (expressionString.isNotEmpty()) {
-            val df = DecimalFormat("#.##")
-            binding.resInput.text = df.format(expressionString.toFloat() / currentCourse);
+            val df = DecimalFormat("#,###.##")
+            binding.resInput.text = df.format(expressionString.toFloat() / currentCourse).toString()
         } else {
             binding.resInput.text = ""
         }
