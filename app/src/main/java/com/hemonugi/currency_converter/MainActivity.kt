@@ -36,6 +36,12 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.numSwitch.setOnClickListener {
+            ratesCalculator.switch()
+            update()
+            updateLabels()
+        }
+
         binding.numBack.setOnClickListener {
             ratesCalculator.remove()
             update()
@@ -52,5 +58,12 @@ class MainActivity : AppCompatActivity() {
         val formatter = DecimalFormat("#,###.##")
         binding.expInput.text = formatter.format(ratesCalculator.inputCurrency).toString()
         binding.resInput.text = formatter.format(ratesCalculator.outputCurrency).toString()
+    }
+
+    private fun updateLabels()
+    {
+        val expLabel = binding.expLabel.text
+        binding.expLabel.text = binding.resLabel.text
+        binding.resLabel.text = expLabel
     }
 }

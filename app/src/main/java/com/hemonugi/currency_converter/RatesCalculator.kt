@@ -3,6 +3,7 @@ package com.hemonugi.currency_converter
 class RatesCalculator {
 
     private var input: String = ""
+    var isSwitch: Boolean = false
 
     val inputCurrency: Float
         get() {
@@ -13,7 +14,7 @@ class RatesCalculator {
         }
 
     val outputCurrency: Float
-        get() = inputCurrency / 6.30f
+        get() = if (isSwitch) inputCurrency / 0.153f else inputCurrency / 6.30f
 
     fun add(value: String) {
         if (value.substring(0, 1) == ".") {
@@ -22,6 +23,10 @@ class RatesCalculator {
         }
 
         input += value
+    }
+
+    fun switch() {
+        isSwitch = !isSwitch
     }
 
     fun remove() {
