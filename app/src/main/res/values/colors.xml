@@ -10,4 +10,5 @@
 
     <color name="main_background">#212121</color>
     <color name="main_text">#E0E0E0</color>
+    <color name="orange_text">#FFB87107</color>
   </resources>

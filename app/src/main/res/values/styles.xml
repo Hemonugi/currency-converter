@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <style name="NumberButtonsStyle">
+    <style name="NumericalButton">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
@@ -12,7 +12,20 @@
         <item name="android:textColor">@color/main_text</item>
     </style>
 
-    <style name="InputStyle">
+    <style name="ArithmeticButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:visibility">gone</item>
+
+        <item name="android:background">@color/main_background</item>
+        <item name="android:textColor">@color/orange_text</item>
+    </style>
+
+    <style name="FormInput">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>

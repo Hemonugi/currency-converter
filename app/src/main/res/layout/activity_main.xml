@@ -8,58 +8,58 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/expLabel"
-            android:text="AMD"
-            android:textColor="@color/main_text"
-            android:background="@color/main_background"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:layout_width="0dp" />
+            android:background="@color/main_background"
+            android:text="AMD"
+            android:textColor="@color/main_text" />
 
         <TextView
             android:id="@+id/expInput"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:text="0"
             android:textColor="@color/main_text"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/resLabel"
-            android:text="RUB"
-            android:textColor="@color/main_text"
-            android:background="@color/main_background"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
-            android:layout_width="0dp" />
+            android:background="@color/main_background"
+            android:text="RUB"
+            android:textColor="@color/main_text" />
 
         <TextView
             android:id="@+id/resInput"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:gravity="right|center_vertical"
             android:text="0"
             android:textColor="@color/main_text"
-            android:textSize="16sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -71,15 +71,21 @@
         <Button
             android:id="@+id/numSwitch"
             android:text="swith"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
         <Button
             android:id="@+id/numClear"
             android:text="clear"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
         <Button
             android:id="@+id/numBack"
             android:text="back"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
+
+        <Button
+            android:id="@+id/division"
+            style="@style/ArithmeticButton"
+            android:background="#00321313"
+            android:text="%" />
 
     </LinearLayout>
 
@@ -92,16 +98,21 @@
         <Button
             android:id="@+id/numSeven"
             android:text="7"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
         <Button
             android:id="@+id/numEight"
             android:text="8"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
 
         <Button
             android:id="@+id/numNine"
             android:text="9"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
+        <Button
+            android:id="@+id/multiply"
+            android:text="*"
+            style="@style/ArithmeticButton" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -113,16 +124,20 @@
         <Button
             android:id="@+id/numFour"
             android:text="4"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
         <Button
             android:id="@+id/numFive"
             android:text="5"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
 
         <Button
             android:id="@+id/numSix"
             android:text="6"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
+        <Button
+            android:id="@+id/subtract"
+            android:text="-"
+            style="@style/ArithmeticButton" />
     </LinearLayout>
 
     <LinearLayout
@@ -134,16 +149,20 @@
         <Button
             android:id="@+id/numOne"
             android:text="1"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
         <Button
             android:id="@+id/numTwo"
             android:text="2"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
 
         <Button
             android:id="@+id/numThree"
             android:text="3"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
+        <Button
+            android:id="@+id/sum"
+            android:text="+"
+            style="@style/ArithmeticButton" />
     </LinearLayout>
 
     <LinearLayout
@@ -155,10 +174,15 @@
         <Button
             android:id="@+id/numZero"
             android:text="0"
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton"
+            android:layout_weight="2" />
         <Button
             android:id="@+id/numDot"
             android:text="."
-            style="@style/NumberButtonsStyle" />
+            style="@style/NumericalButton" />
+        <Button
+            android:id="@+id/calculate"
+            android:text="="
+            style="@style/ArithmeticButton" />
     </LinearLayout>
 </LinearLayout>
