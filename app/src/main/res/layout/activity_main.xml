@@ -85,7 +85,7 @@
             android:id="@+id/division"
             style="@style/ArithmeticButton"
             android:background="#00321313"
-            android:text="%" />
+            android:text="÷" />
 
     </LinearLayout>
 
@@ -110,7 +110,7 @@
             style="@style/NumericalButton" />
         <Button
             android:id="@+id/multiply"
-            android:text="*"
+            android:text="×"
             style="@style/ArithmeticButton" />
 
     </LinearLayout>

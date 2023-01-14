@@ -2,6 +2,7 @@ package com.hemonugi.currency_converter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import com.hemonugi.currency_converter.databinding.ActivityMainBinding
 import java.text.DecimalFormat
 
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
 
         val buttons = listOf(
             binding.numDot,
@@ -50,6 +52,24 @@ class MainActivity : AppCompatActivity() {
 
         binding.numClear.setOnClickListener {
             ratesCalculator.clear()
+            update()
+        }
+
+        val arithmeticButtons = listOf(
+            binding.sum,
+            binding.division,
+            binding.multiply,
+            binding.subtract,
+        )
+
+        arithmeticButtons.forEach { button ->
+            button.setOnClickListener {
+                ratesCalculator.addOperator(button.text as String)
+            }
+        }
+
+        binding.calculate.setOnClickListener {
+            ratesCalculator.calculate()
             update()
         }
     }

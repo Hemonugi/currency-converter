@@ -1,8 +1,11 @@
 package com.hemonugi.currency_converter
+import org.mariuszgromada.math.mxparser.Expression
 
 class RatesCalculator {
 
     private var input: String = ""
+    private var operator: String = ""
+
     var isSwitch: Boolean = false
 
     val inputCurrency: Float
@@ -25,17 +28,36 @@ class RatesCalculator {
         input += value
     }
 
+    fun addOperator(value: String) {
+        if (input.isNotEmpty()) {
+            operator = "$input$value"
+            input = ""
+            return
+        }
+    }
+
     fun switch() {
         isSwitch = !isSwitch
     }
 
     fun remove() {
         if (input.isNotEmpty()) {
-            input.dropLast(1)
+            input = input.dropLast(1)
         }
     }
 
     fun clear() {
+        operator = ""
         input = ""
+    }
+
+    fun calculate() {
+        val expression = "$operator$input"
+        val result = Expression(expression).calculate()
+
+        operator = ""
+        if (!result.isNaN()) {
+            input = result.toString()
+        }
     }
 }
