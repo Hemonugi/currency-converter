@@ -70,16 +70,16 @@
 
         <Button
             android:id="@+id/numSwitch"
-            android:text="swith"
-            style="@style/NumericalButton" />
+            android:text="switch"
+            style="@style/ActionButton" />
         <Button
             android:id="@+id/numClear"
             android:text="clear"
-            style="@style/NumericalButton" />
+            style="@style/ActionButton" />
         <Button
             android:id="@+id/numBack"
             android:text="back"
-            style="@style/NumericalButton" />
+            style="@style/ActionButton" />
 
         <Button
             android:id="@+id/division"
