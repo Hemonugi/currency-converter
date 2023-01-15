@@ -2,9 +2,12 @@ package com.hemonugi.currency_converter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import com.hemonugi.currency_converter.databinding.ActivityMainBinding
 import java.text.DecimalFormat
+
+data class ArithmeticButton (val button: Button, val operator: String)
 
 class MainActivity : AppCompatActivity() {
 
@@ -56,15 +59,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         val arithmeticButtons = listOf(
-            binding.sum,
-            binding.division,
-            binding.multiply,
-            binding.subtract,
+            ArithmeticButton(binding.sum, "+"),
+            ArithmeticButton(binding.division, "/"),
+            ArithmeticButton(binding.multiply, "*"),
+            ArithmeticButton(binding.subtract, "-"),
         )
 
-        arithmeticButtons.forEach { button ->
-            button.setOnClickListener {
-                ratesCalculator.addOperator(button.text as String)
+        arithmeticButtons.forEach { arithmeticButton ->
+            arithmeticButton.button.setOnClickListener {
+                ratesCalculator.addOperator( arithmeticButton.operator)
             }
         }
 
