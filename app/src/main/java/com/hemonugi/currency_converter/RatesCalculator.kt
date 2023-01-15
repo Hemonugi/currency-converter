@@ -1,5 +1,6 @@
 package com.hemonugi.currency_converter
 import org.mariuszgromada.math.mxparser.Expression
+import kotlin.math.floor
 
 class RatesCalculator {
 
@@ -57,6 +58,11 @@ class RatesCalculator {
 
         operator = ""
         if (!result.isNaN()) {
+            if (floor(result) == result) {
+                input = result.toInt().toString()
+                return
+            }
+
             input = result.toString()
         }
     }

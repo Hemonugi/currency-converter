@@ -26,4 +26,21 @@ class RatesCalculatorTest
         assertEquals(expectedResult, calc.inputCurrency)
     }
 
+    @ParameterizedTest
+    @CsvSource(
+        "10, +, 10, 2",
+        "6, /, 4, 1"
+    )
+    fun testBackspaceBug(value1: String, operator: String, value2: String, expectedResult: Float) {
+        val calc = RatesCalculator()
+
+        calc.add(value1)
+        calc.addOperator(operator)
+        calc.add(value2)
+        calc.calculate()
+
+        calc.remove()
+
+        assertEquals(expectedResult, calc.inputCurrency)
+    }
 }
