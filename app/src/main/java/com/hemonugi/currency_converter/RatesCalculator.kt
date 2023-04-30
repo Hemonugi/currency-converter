@@ -2,12 +2,10 @@ package com.hemonugi.currency_converter
 import org.mariuszgromada.math.mxparser.Expression
 import kotlin.math.floor
 
-class RatesCalculator {
+class RatesCalculator(private val rate: Rate) {
 
     private var input: String = ""
     private var operator: String = ""
-
-    var isSwitch: Boolean = false
 
     val inputCurrency: Float
         get() {
@@ -18,7 +16,7 @@ class RatesCalculator {
         }
 
     val outputCurrency: Float
-        get() = if (isSwitch) inputCurrency / 0.153f else inputCurrency / 6.30f
+        get() = rate.output(inputCurrency)
 
     fun add(value: String) {
         if (value.substring(0, 1) == ".") {
@@ -38,7 +36,7 @@ class RatesCalculator {
     }
 
     fun switch() {
-        isSwitch = !isSwitch
+        rate.flip()
     }
 
     fun remove() {

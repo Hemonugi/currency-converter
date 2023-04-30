@@ -16,7 +16,7 @@ class RatesCalculatorTest
         "10, ÷, 5, 5",
     )
     fun testCalculate(value1: String, operator: String, value2: String, expectedResult: Float) {
-        val calc = RatesCalculator()
+        val calc = RatesCalculator(Rate(100, 20.8228f))
 
         calc.add(value1)
         calc.addOperator(operator)
@@ -32,7 +32,7 @@ class RatesCalculatorTest
         "6, /, 4, 1"
     )
     fun testBackspaceBug(value1: String, operator: String, value2: String, expectedResult: Float) {
-        val calc = RatesCalculator()
+        val calc = RatesCalculator(Rate(100, 20.8228f))
 
         calc.add(value1)
         calc.addOperator(operator)

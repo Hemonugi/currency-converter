@@ -2,6 +2,7 @@ package com.hemonugi.currency_converter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import com.hemonugi.currency_converter.databinding.ActivityMainBinding
@@ -12,7 +13,7 @@ data class ArithmeticButton (val button: Button, val operator: String)
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val ratesCalculator = RatesCalculator()
+    private val ratesCalculator = RatesCalculator(Rate(100, 20.8228f))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +76,11 @@ class MainActivity : AppCompatActivity() {
             ratesCalculator.calculate()
             update()
         }
+
+
+        val parser = CrbXmlParser()
+        val currencies = parser.parse(assets.open("XML_daily.xml"))
+        Log.d("test", currencies.find { it.charCode == "AMD" }?.value ?: currencies.first().value)
     }
 
     private fun update()
